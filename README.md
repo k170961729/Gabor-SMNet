@@ -1,8 +1,39 @@
 Followed from https://github.com/JiaRenChang/PSMNet
 
-We design a simple model and add Gabor CNN.
+Dependencies:
 
-In Gabor CNN, both the scale parameter and the number of channels are set to 4.
+Python 3.5
+PyTorch 0.4.0+
+torchvision 0.2.0
+
+Dataset:
+KITTI 2012 / KITTI 2015
+Scene Flow
+
+KITTI: The KITTI dataset is relatively small and has real-world pictures with sparse ground truth disparity maps.
+Scene Flow: The Scene Flow dataset is relatively large. It is a synthetic dataset with dense ground truth disparity maps.
+Training strategy: Pretrain the network using Scene Flow dataset, then finetune the network on the KITTI dataset
+
+Train:
+python main.py --maxdisp 192 \
+               --datapath /SceneFlow_dataset_path \
+               --epochs 10  \
+               --savemodel ./trained/
+
+python finetune.py --maxdisp 192 \
+                   --datatype 2015 \
+                   --datapath /KITTI2_train_set_path \
+                   --epochs 600 \
+                   --loadmodel ./trained/checkpoint_10.tar \
+                   --savemodel ./trained/trained2015
+
+Evaluation:
+python submission.py --loadmodel ./trained/trained2012/finetune_600.tar  \
+                     --KITTI 2012
+                     --datapath  /KITTI_test_set_path
+
+Final Result:
+The disparity maps for the KITTI testset are calculated by submission.py, those disparity maps are submitted to the KITTI website to calculated the final accuracy result.
 
 ## Please cite
 
