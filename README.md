@@ -2,16 +2,16 @@ Followed from https://github.com/JiaRenChang/PSMNet
 
 ## Dependencies
 
-Python 3.5
+·Python 3.5
 
-PyTorch 0.4.0+
+·PyTorch 0.4.0+
 
-torchvision 0.2.0
+·torchvision 0.2.0
 
 ## Dataset
-KITTI 2012 / KITTI 2015
+·KITTI 2012 / KITTI 2015
 
-Scene Flow
+·Scene Flow
 
 KITTI: The KITTI dataset is relatively small and has real-world pictures with sparse ground truth disparity maps.
 Scene Flow: The Scene Flow dataset is relatively large. It is a synthetic dataset with dense ground truth disparity maps.
