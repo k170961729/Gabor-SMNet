@@ -14,8 +14,10 @@ Followed from https://github.com/JiaRenChang/PSMNet
 * Scene Flow
 
 KITTI: The KITTI dataset is relatively small and has real-world pictures with sparse ground truth disparity maps.
+
 Scene Flow: The Scene Flow dataset is relatively large. It is a synthetic dataset with dense ground truth disparity maps.
-Training strategy: Pretrain the network using Scene Flow dataset, then finetune the network on the KITTI dataset
+
+Training Strategy: Pretrain the network using Scene Flow dataset, then finetune the network on the KITTI dataset
 
 ## Train
 ```
