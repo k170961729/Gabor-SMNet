@@ -7,6 +7,7 @@ Followed from https://github.com/JiaRenChang/PSMNet
 * PyTorch 0.4.0+
 
 * torchvision 0.2.0
+*You also need to set up Gabor CNNs first, https://github.com/jxgu1016/Gabor_CNN_PyTorch
 
 ## Dataset
 * KITTI 2012 / KITTI 2015
